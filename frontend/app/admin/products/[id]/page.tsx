@@ -71,21 +71,20 @@ export default function ProductViewPage({
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+      <div className="space-y-4">
+        <div className="min-w-0">
+          <h1 className="truncate text-3xl font-serif font-bold text-gray-900 whitespace-nowrap">
+            {product.name}
+          </h1>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
           <Button variant="outline" size="sm" asChild>
             <Link href="/admin/products">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Products
             </Link>
           </Button>
-          <div>
-            <h1 className="text-3xl font-serif font-bold text-gray-900">
-              {product.name}
-            </h1>
-          </div>
-        </div>
-        <div className="flex space-x-2">
           <Button variant="outline" asChild>
             <Link href={`/admin/products/${product._id}/edit`}>
               <Edit className="h-4 w-4 mr-2" />
