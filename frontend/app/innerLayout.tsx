@@ -34,7 +34,7 @@ export default function InnerLayoutClient({ children }: { children: React.ReactN
         {session?.user?.role === "admin" && !isAdminPage && (
           <Link
             href="/admin"
-            className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-3 text-sm font-medium shadow-lg transition hover:bg-muted"
+            className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-lg transition hover:bg-primary/90"
             aria-label="Return to admin dashboard"
           >
             <LayoutDashboard className="h-4 w-4" />
